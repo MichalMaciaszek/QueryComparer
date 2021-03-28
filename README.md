@@ -1,7 +1,7 @@
 It is advised to use Python 3.7 or higher.
 
 
-##Automatic start
+## Automatic start
 ```
 chmod u+x run.sh
 ./run.sh
@@ -9,7 +9,7 @@ chmod u+x run.sh
 
 
 
-##Manual start
+## Manual start
 
 Install required packages with
 ```

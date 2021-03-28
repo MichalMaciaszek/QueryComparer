@@ -22,7 +22,6 @@ def compare_query_keywords(splitted_first_query, splitted_second_query, keywords
         return True
     return False
 
-#@pytest.fixture
 def compare_queries_classes(first_query, second_query):
     first_splitted_queries = list(filter(None, re.split(r"(\)|max|select|group by)", first_query.lower())))
     first_splitted_queries = [e for e in first_splitted_queries if e not in (' ')]              #remove standalone whitespaces
@@ -71,4 +70,8 @@ if __name__ == '__main__':
     a = "SELECT MAX(col_1) FROM table GROUP BY col_2"
     b = "SELECT MAX(col_1) FROM table GROUP BY col_3"
     test_queries(a,b)
-
+    print("Add your first query to test: ")
+    a = input()
+    print("Add your second query to test: ")
+    b = input()
+    test_queries(a, b)

@@ -18,9 +18,8 @@ def compare_query_keywords(splitted_first_query, splitted_second_query, keywords
     a_actions = [e for e in splitted_first_query if e in ('select', 'max', 'group by', '+')]
     b_actions = [e for e in splitted_second_query if e in ('select', 'max', 'group by', '+')]
 
-    if a_actions == b_actions:                                                                                                      #let's say that order does matter in this case
-        return True
-    return False
+    return (a_actions == b_actions)                                                                                                     #let's say that order does matter in this case
+
 
 def compare_queries_classes(first_query, second_query):
     first_splitted_queries = list(filter(None, re.split(r"(\)|max|select|group by)", first_query.lower())))
